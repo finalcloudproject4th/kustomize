@@ -90,7 +90,7 @@ pipeline {
         sh "git config --global user.email ${gitEmail}"
         sh "git config --global user.name ${gitName}"
         // sh "cd prod && sed -i 's/eks-demo-repo:.*/eks-demo-repo:${currentBuild.number}/g' deployment.yaml"
-        sh "cd prod && kubectl apply -k kustomize.yaml"
+        sh "cd prod && kubectl apply -k kustomization.yaml"
         sh "git add -A"
         sh "git status"
         sh "git commit -m 'update the image tag'"
