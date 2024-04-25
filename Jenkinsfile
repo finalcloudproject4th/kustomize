@@ -89,7 +89,8 @@ pipeline {
         // 이미지 태그 변경 후 메인 브랜치에 푸시
         sh "git config --global user.email ${gitEmail}"
         sh "git config --global user.name ${gitName}"
-        sh "cd prod && sed -i 's/eks-demo-repo:.*/eks-demo-repo:${currentBuild.number}/g' deployment.yaml"
+        // sh "cd prod && sed -i 's/eks-demo-repo:.*/eks-demo-repo:${currentBuild.number}/g' deployment.yaml"
+        sh "cd prod && kubectl apply -k kustomize.yaml"
         sh "git add -A"
         sh "git status"
         sh "git commit -m 'update the image tag'"
