@@ -5,11 +5,11 @@ metadata:
     app: demo-nginx
   name: demo-nginx-svc
 spec:
-#  type: LoadBalancer
-type: NodePort
+  type: NodePort
   ports:
   - port: 9090
     protocol: TCP
     targetPort: 80
   selector:
     app: demo-nginx
+
