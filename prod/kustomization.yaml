@@ -2,4 +2,3 @@ namePrefix: prod-
 resources:
 - deployment.yaml
 - service.yaml
-- ingress-alb.yaml
