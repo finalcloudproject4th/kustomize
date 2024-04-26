@@ -18,7 +18,7 @@ spec:
         app: demo-nginx
     spec:
       containers:
-      - image: 637423550581.dkr.ecr.us-west-2.amazonaws.com/eks-demo-repo:90
+      - image: 637423550581.dkr.ecr.us-west-2.amazonaws.com/eks-demo-repo:91
         name: nginx
         ports:
         - containerPort: 80
